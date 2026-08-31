@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WineNut - Winemakers</title>
+    <title>WineNut - Winemakers | Vini Naturali e Artigianali</title>
+<meta name="description" content="Scopri i vini naturali e artigianali di WineNut Winemakers. Produzione rispettosa della terra, fermentazioni spontanee e nessuna filtrazione.">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+
     <style>
 
 
@@ -22,22 +27,23 @@
             z-index: 0;
         }
 
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('logo.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 700px;
-            opacity: 0.12;
-            filter: blur(6px);
-            z-index: -1;
-            pointer-events: none;
-        }
+      body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 600px; 
+    opacity: 0.12;
+    filter: blur(6px);
+    z-index: -1;
+    pointer-events: none;
+    animation: muoviLogoSfondo 12s ease-in-out infinite;
+}
 
         .main-content {
             flex: 1;
@@ -178,7 +184,48 @@
   /* Mostra i numeri quando passi col mouse su WhatsApp */
   .dropdown-whatsapp:hover .contenuto-tendina {
     display: block;
-  }
+}
+
+@keyframes entrata {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animazione-logo {
+    animation: entrata 1.5s ease-out forwards;
+}
+
+
+@keyframes muoviLogoSfondo {
+    0% {
+        transform: scale(1) translate(0%, 0%) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.05) translate(2%, 2%) rotate(1deg); /* Si sposta a destra/basso e ruota un pochino */
+    }
+    50% {
+        transform: scale(1.1) translate(0%, -2%) rotate(0deg); /* Torna al centro ma più grande e sale */
+    }
+    75% {
+        transform: scale(1.05) translate(-2%, 2%) rotate(-1deg); /* Si sposta a sinistra/basso e ruota dall'altra parte */
+    }
+    100% {
+        transform: scale(1) translate(0%, 0%) rotate(0deg); /* Torna esattamente al centro */
+    }
+}
+
+
+
+
+
+
+
 </style>
 
 
@@ -259,7 +306,9 @@
 
     <div class="main-content">
         <div class="container">
-            <h1 class="title" style="text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);">WINENUT</h1>
+
+     <h1 class="title animazione-logo" style="text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);">WINENUT</h1>
+            
             <h2 class="subtitle" style="text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.9);">winemakers</h2>
 
             <p class="testo-corpo" style="text-align-last: center;">
@@ -277,7 +326,7 @@ Vinificazioni spontanee, macerazioni mirate, nessuna filtrazione o stabilizzazio
             </p >
 <div style="text-align: center; margin: 40px 0;">
     <a href="catalogo.pdf" target="_blank" style="display: inline-block; padding: 12px 30px; border: 1px solid #222; color: #222; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9em;">
-        SCARICA IL CATALOGO
+        SCOPRI I NOSTRI VINI ARTIGIANALI
     </a >
 </div>
 <p style="text-align: center; font-size: 0.85em; letter-spacing: 4px; text-transform: uppercase; margin-top: 25px; color: #333;">

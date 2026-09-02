@@ -214,6 +214,17 @@
 
 
 
+<!-- 1. Richiamo alla libreria EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init({
+      publicKey: "N-UrUp5MMUKU8K-VE"
+    });
+  })();
+</script>
+
+
 
 
 
@@ -281,7 +292,7 @@
 
 
          <p class="testo-corpo" style="text-align-last: center;">
-  WinenutWsz5inemakers is a lifestyle. Enology understood as a journey and discovery! Wine seen through new eyes. In collaboration with different earth-respecting producers and by recovering abandoned vineyards, we produce our wines through spontaneous fermentations, targeted macerations, with no filtration or stabilization.
+  WinenutWinemakers is a lifestyle. Enology understood as a journey and discovery! Wine seen through new eyes. In collaboration with different earth-respecting producers and by recovering abandoned vineyards, we produce our wines through spontaneous fermentations, targeted macerations, with no filtration or stabilization.
 </p >
 
 <p class="testo-corpo testo-centrato">
@@ -315,12 +326,23 @@
 
 <div style="text-align: center; margin: 60px auto; padding: 40px 20px; border: 1px dashed #999; max-width: 800px;">
     <h3 style="font-family: 'Cinzel', serif; letter-spacing: 3px; font-size: 1.2em; text-transform: uppercase; margin-bottom: 10px; color: #222";>Join the journey</h3>
-    <p style="font-size: 0.85em; color: #666; margin-bottom: 25px; line-height: 1.6;">Our winery is always on the move. What will be the region of our next harvest? Send us your guess.</p >
-    <form action="mailto:contact.winenut@gmail.com" method="post" enctype="text/plain" style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <input type="text" name="Ipotesi_Regione" placeholder="Guess the region..." required style="padding: 10px; border: none; border-bottom: 1px solid #333; background: transparent; min-width: 200px; text-align: center; outline: none; font-family: sans-serif;">
-        <input type="email" name="Email_Utente" placeholder="Your email..." required style="padding: 10px; border: none; border-bottom: 1px solid #333; background: transparent; min-width: 200px; text-align: center; outline: none; font-family: sans-serif;">
-        <button type="submit" style="padding: 10px 25px; border: 1px solid #222; background: transparent; color: #222; font-family: 'Cinzel', serif; text-transform: uppercase; letter-spacing: 1px; cursor: pointer;">SUBMIT</button>
-    </form>
+  
+
+
+  <p style="font-size: 0.85em; color: #666; margin-bottom: 25px; line-height: 1.6;">Our winery is always on the move. What will be the region of our next harvest? Send us your guess.</p >
+   
+
+
+ <!-- 2. Il tuo Modulo HTML -->
+<form id="form-gioco">
+  <input type="text" name="ipotesi_regione" placeholder="Write the region..." required>
+  <input type="email" name="email_partecipante" placeholder="Your email..." required>
+  <button type="submit">START</button>
+</form>
+
+
+
+
 </div>
 
 
@@ -359,5 +381,43 @@
 <p style="text-align: right; width: 100%; display: block; align-self: flex-end; margin-top: 60px; padding-right: 20px; box-sizing: border-box; font-size: 0.75em; color: #555; letter-spacing: 1px; text-transform: uppercase;">
   &copy; 2020 all rights reserved to winenutwinemakers
 </p >
+
+
+<!-- 3. Lo script di funzionamento -->
+<script>
+document.getElementById('form-gioco').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const btn = event.target.querySelector('button');
+  btn.textContent = 'SENDING...';
+  
+  emailjs.sendForm('service_longb6a', 'template_o87te8i', this)
+  .then(() => {
+    btn.textContent = 'SENT!';
+    this.reset();
+  }, (error) => {
+    btn.textContent = 'ERROR';
+    console.log('Errore tecnico', error);
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

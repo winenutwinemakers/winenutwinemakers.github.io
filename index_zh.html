@@ -207,7 +207,15 @@
 }
 </style>
 
-
+<!-- 1. Richiamo alla libreria EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init({
+      publicKey: "N-UrUp5MMUKU8K-VE"
+    });
+  })();
+</script>
 
 
 
@@ -298,11 +306,21 @@
 <div style="text-align: center; margin: 60px auto; padding: 40px 20px; border: 1px dashed #999; max-width: 800px;">
     <h3 style="font-family: 'Cinzel', serif; letter-spacing: 3px; font-size: 1.2em; text-transform: uppercase; margin-bottom: 10px;">猜猜产区</h3>
     <p style="font-size: 0.85em; color: #666; margin-bottom: 25px; line-height: 1.6;">我们的酒庄始终在不断探索。下一站会是哪里？</p >
-    <form action="mailto:contact.winenut@gmail.com" method="post" enctype="text/plain" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-        <input type="text" name="Ipotesi_Regione" placeholder="猜猜是哪个产区..." required style="padding: 10px; border: none; border-bottom: 1px solid #999; width: 200px; text-align: center; outline: none; font-family: sans-serif;">
-        <input type="email" name="Email_Utente" placeholder="您的电子邮箱..." required style="padding: 10px; border: none; border-bottom: 1px solid #999; width: 200px; text-align: center; outline: none; font-family: sans-serif;">
-        <button type="submit" style="padding: 10px 25px; border: 1px solid #222; background: transparent; color: #222; font-family: 'Cinzel', sans-serif; letter-spacing: 1px; cursor: pointer;">提交</button>
-    </form>
+ 
+
+
+
+<!-- 2. Il tuo Modulo HTML -->
+<form id="form-gioco">
+  <input type="text" name="ipotesi_regione" placeholder="输入地区..." required>
+  <input type="email" name="email_partecipante" placeholder="你的电子邮箱..." required>
+  <button type="submit">开始</button>
+</form>
+
+
+
+
+
 </div>
 
 
@@ -337,6 +355,28 @@
 <p style="text-align: right; width: 100%; display: block; align-self: flex-end; margin-top: 60px; padding-right: 20px; box-sizing: border-box; font-size: 0.65em; letter-spacing: 1px; text-transform: uppercase;">
 &copy; 2020 winenutwinemakers 版权所有
 </p >
+
+
+<!-- 3. Lo script di funzionamento -->
+<script>
+document.getElementById('form-gioco').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const btn = event.target.querySelector('button');
+  btn.textContent = '发送中...';
+  
+  emailjs.sendForm('service_longb6a', 'template_o87te8i', this)
+  .then(() => {
+    btn.textContent = '已发送！';
+    this.reset();
+  }, (error) => {
+    btn.textContent = '错误';
+    console.log('Errore tecnico', error);
+  });
+});
+</script>
+
+
 
 
 

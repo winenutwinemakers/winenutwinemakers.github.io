@@ -369,11 +369,11 @@ document.getElementById('form-gioco').addEventListener('submit', function(event)
   event.preventDefault();
   
   const btn = event.target.querySelector('button');
-  btn.textContent = 'INVIANDO...';
+  btn.textContent = 'SENDING...';
   
   emailjs.sendForm('service_1ongb6a', 'template_o87te8i', this)
   .then(() => {
-    btn.textContent = 'INVIATO!';
+    btn.textContent = 'SENT!';
     this.reset();
   }, (error) => {
     btn.textContent = 'ERRORE';

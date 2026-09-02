@@ -213,20 +213,15 @@
 
 
 
-<!-- 1. EmailJS library reference -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
+<!-- 1. Richiamo alla libreria EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
-(function(){
+  (function(){
     emailjs.init({
-        publicKey: "N-UrUp5MMUKU8K-VE"
+      publicKey: "N-UrUp5MMUKU8K-VE"
     });
-})();
+  })();
 </script>
-
-
-
-
-
 
 
 
@@ -321,29 +316,24 @@
 
 
 
+<div style="text-align: center; margin: 60px auto; padding: 40px; max-width: 600px;">
+  <h3 style="font-family: 'Cinzel', serif; letter-spacing: 3px;">GUESS THE REGION</h3>
+  <p style="font-size: 0.85em; color: #666; margin-bottom: 25px;">Enter your guess and your email address below to participate.</p >
 
-
-<div style="text-align: center; margin: 60px auto; padding: 40px 20px;">
-    <h3 style="font-family: 'Cinzel', serif; letter-spacing: 3px;"></h3>
-    <p style="font-size: 0.85em; color: #666; margin-bottom: 25px;">Enter your hypothesis.</p >
-
-    <!-- 2. Your HTML Form -->
-    <form id="form-gioco">
-    <input type="text" name="ipotesi_regione" placeholder="Write your hypothesis...">
-    <input type="email" name="email_partecipante" placeholder="Your email...">
-    <button type="submit">START</button>
-    </form>
+  <!-- 2. Your HTML Form -->
+  <form id="form-gioco" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+    <input type="text" name="ipotesi_regione" placeholder="Write your guess..." style="padding: 10px; width: 100%; max-width: 300px; text-align: center;">
+    <input type="email" name="email_partecipante" placeholder="Your email" style="padding: 10px; width: 100%; max-width: 300px; text-align: center;">
+    <button type="submit" style="padding: 10px 30px; letter-spacing: 2px; cursor: pointer;">START</button>
+  </form>
 </div>
 
-
-
-
-
-
-<div class="links-contatti">
-  <a href="mailto:contact.winenut@gmail.com">Email</a >
+<div class="Links-contatti" style="text-align: center; margin-bottom: 40px;">
+  <a href="mailto:contact.winenut@gmail.com " style="margin-right: 20px;">Email</a >
   <a href="https://instagram.com/winenut.winemakers" target="_blank">Instagram</a >
-  
+
+
+
   <!-- Contenitore WhatsApp con comandi HTML per mostrare/nascondere la tendina -->
   <div style="position: relative; display: inline-block;" 
        onmouseenter="document.getElementById('menu-wa').style.display='block'" 
@@ -371,22 +361,24 @@
 &copy; 2020 all rights reserved to winenutwinemakers
 </p >
 
-<!-- 3. Working script -->
+
+
+<!-- 3. Lo script di funzionamento -->
 <script>
 document.getElementById('form-gioco').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const btn = event.target.querySelector('button');
-    btn.textContent = 'SENDING...';
-
-    emailjs.sendForm('service_longb6a', 'template_o87te8i', this)
-    .then(() => {
-        btn.textContent = 'SENT!';
-        this.reset();
-    }, (error) => {
-        btn.textContent = 'ERROR';
-        console.log('Technical error', error);
-    });
+  event.preventDefault();
+  
+  const btn = event.target.querySelector('button');
+  btn.textContent = 'INVIANDO...';
+  
+  emailjs.sendForm('service_1ongb6a', 'template_o87te8i', this)
+  .then(() => {
+    btn.textContent = 'INVIATO!';
+    this.reset();
+  }, (error) => {
+    btn.textContent = 'ERRORE';
+    console.log('Errore tecnico', error);
+  });
 });
 </script>
 

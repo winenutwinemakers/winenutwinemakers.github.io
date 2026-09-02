@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WineNut - Winemakers | Vini Naturali e Artigianali</title>
-<meta name="description" content="Scopri i vini naturali e artigianali di WineNut Winemakers. Produzione rispettosa della terra, fermentazioni spontanee e nessuna filtrazione.">
+    <meta name="description" content="Scopri i vini naturali e artigianali di WineNut Winemakers. Produzione rispettosa della terra, fermentazioni spontanee e nessuna filtrazione.">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-<link rel="icon" type="image/png" href="favicon.png">
-
-
-    <style>
-
-
-
+  <style>
         body {
             margin: 0;
             padding: 0;
@@ -25,7 +20,7 @@
             min-height: 100vh;
             position: relative;
             z-index: 0;
-        }
+           }
 
       body::before {
     content: "";
@@ -148,10 +143,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Crea spazio verticale tra i tre link */
+    gap: 15px;
   }
 }
     </style>
+
 
 <style>
   /* Gestione della tendina */
@@ -184,22 +180,7 @@
   /* Mostra i numeri quando passi col mouse su WhatsApp */
   .dropdown-whatsapp:hover .contenuto-tendina {
     display: block;
-}
-
-@keyframes entrata {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animazione-logo {
-    animation: entrata 1.5s ease-out forwards;
-}
+  }
 
 
 @keyframes muoviLogoSfondo {
@@ -207,20 +188,19 @@
         transform: scale(1) translate(0%, 0%) rotate(0deg);
     }
     25% {
-        transform: scale(1.05) translate(2%, 2%) rotate(1deg); /* Si sposta a destra/basso e ruota un pochino */
+        transform: scale(1.05) translate(2%, 2%) rotate(1deg);
     }
     50% {
-        transform: scale(1.1) translate(0%, -2%) rotate(0deg); /* Torna al centro ma più grande e sale */
+        transform: scale(1.1) translate(0%, -2%) rotate(0deg);
     }
     75% {
-        transform: scale(1.05) translate(-2%, 2%) rotate(-1deg); /* Si sposta a sinistra/basso e ruota dall'altra parte */
+        transform: scale(1.05) translate(-2%, 2%) rotate(-1deg);
     }
     100% {
-        transform: scale(1) translate(0%, 0%) rotate(0deg); /* Torna esattamente al centro */
+        transform: scale(1) translate(0%, 0%) rotate(0deg);
     }
 }
 </style>
-
 
 <!-- 1. Richiamo alla libreria EmailJS -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -234,8 +214,25 @@
 
 
 
+
+
 </head>
 <body>
+
+
+
+<!-- INSERISCI QUI IL SELETTORE LINGUA -->
+<div style="text-align: center; padding: 20px; font-family: serif; letter-spacing: 2px; font-size: 14px;">
+    <a href="index.html " style="text-decoration: none; color: black; font-weight: bold;">IT</a > | 
+    <a href="index_en.html" style="text-decoration: none; color: black;">EN</a > | 
+    <a href="index_zh.html" style="text-decoration: none; color: black;">ZH</a >
+</div>
+
+
+
+
+
+
 
 
 
@@ -244,85 +241,41 @@
 <div id="verifica-eta" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.95); z-index: 9999;">
   <div style="text-align: center; padding: 40px 30px; border: 1px solid #222; max-width: 450px; background: #fff; margin: 10% auto; position: relative;">
 
-
-
-
-
-
-
-
-
-    <!-- Selettore Lingua interno al riquadro -->
-    <div style="position: absolute; top: 15px; right: 20px; font-family: sans-serif; font-size: 0.8em; letter-spacing: 1px;">
-      <span style="font-weight: bold; color: #000; cursor: default;">IT</span>
-      <span style="margin: 0 5px; color: #ccc;">|</span>
-      <a href="index_en.html" style="text-decoration: none; color: #999; transition: 0.3s;">EN</a>
-<span style="margin: 0 5px; color: #ccc;">|</span>
-      <a href="index_zh.html" style="text-decoration: none; color: #999; transition: 0.3s;">ZH</a>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Selettore Lingua interno al riquadro (FILE ITALIANO) -->
+<div style="position: absolute; top: 15px; right: 20px; font-family: sans-serif; font-size: 0.8em; letter-spacing: 1px;">
+    <span style="font-weight: bold; color: #000; cursor: default;">IT</span>
+    <span style="margin: 0 5px; color: #ccc;">|</span>
+    <a href="index_en.html" style="text-decoration: none; color: #999; transition: 0.3s;">EN</a >
+    <span style="margin: 0 5px; color: #ccc;">|</span>
+    <a href="index_zh.html" style="text-decoration: none; color: #999; transition: 0.3s;">ZH</a >
+</div>
 
     <!-- Testi e Pulsanti -->
     <h2 style="font-family: 'Cinzel', serif; letter-spacing: 2px; margin-top: 20px; margin-bottom: 20px; font-size: 1.8em;">SEI MAGGIORENNE?</h2>
-    <p style="font-family: sans-serif; font-size: 0.9em; color: #555; margin-bottom: 30px; line-height: 1.5;">Devi avere l'età legale per il consumo di alcolici nel tuo paese di residenza.</p >
-
+    <p style="font-family: sans-serif; font-size: 0.9em; color: #555; margin-bottom: 30px; line-height: 1.5;">Per entrare devi aver raggiunto l'età legale per il consumo di alcolici nel tuo paese di residenza.</p >
 
 <a onclick="document.getElementById('verifica-eta').style.display='none'" style="padding: 12px 30px; border: 1px solid #222; color: #222; background: transparent; text-transform: uppercase; cursor: pointer; margin: 5px; display: inline-block; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 1px;">SÌ</a >
     
 <a href="https://google.com" style="padding: 12px 30px; border: 1px solid #222; color: #222; background: transparent; text-transform: uppercase; cursor: pointer; margin: 5px; display: inline-block; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 1px;">NO</a >
- 
-
-
     
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
     <div class="main-content">
         <div class="container">
-
-     <h1 class="title animazione-logo" style="text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);">WINENUT</h1>
-            
+            <h1 class="title" style="text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);">WINENUT</h1>
             <h2 class="subtitle" style="text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.9);">winemakers</h2>
 
-            <p class="testo-corpo" style="text-align-last: center;">
-                WinenutWinemakers è uno stile di vita. L'enologia intesa come viaggio e scoperta! Il vino con occhi nuovi. Ogni anno un differente terroir. Dopo un lavoro di ricerca, di collaborazione con differenti produttori rispettosi della terra che lavorano e/o recupero di vigneti abbandonati produciamo personalmente vini unici e limitati. 
-Vinificazioni spontanee, macerazioni mirate, nessuna filtrazione o stabilizzazione.
-            </p >
+         <p class="testo-corpo" style="text-align-last: center;">
+  WinenutWinemakers è uno stile di vita. L'enologia intesa come viaggio e scoperta! Il vino visto con occhi nuovi. In collaborazione con diversi produttori rispettosi della terra e recuperando vigneti abbandonati, produciamo i nostri vini attraverso fermentazioni spontanee, macerazioni mirate, senza filtrazioni o stabilizzazioni.
+</p >
 
-            <p class="testo-corpo testo-centrato">
-                Tutti i vini sono creati e prodotti artigianalmente da Loris Tartaglia e William Thomas<br>
-              
+<p class="testo-corpo testo-centrato">
+  Tutti i vini sono pensati e realizzati artigianalmente da Loris Tartaglia e William Thomas<br>
+</p >
 
-
-
-  
-            </p >
 <div style="text-align: center; margin: 40px 0;">
-    <a href="catalogo.pdf" target="_blank" style="display: inline-block; padding: 12px 30px; border: 1px solid #222; color: #222; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9em;">
+    <a href="catalogo_it.pdf" target="_blank" style="display: inline-block; padding: 12px 30px; border: 1px solid #222; color: #222; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9em;">
         SCOPRI I NOSTRI VINI ARTIGIANALI
     </a >
 </div>
@@ -330,37 +283,17 @@ Vinificazioni spontanee, macerazioni mirate, nessuna filtrazione o stabilizzazio
   Veneto &bull; Umbria &bull; Romagna &bull; Toscana
 </p >
 
+<div style="text-align: center; margin: 60px auto; padding: 40px; max-width: 600px;">
+  <h3 style="font-family: 'Cinzel', serif; letter-spacing: 3px;">INDOVINA LA REGIONE</h3>
+  <p style="font-size: 0.85em; color: #666; margin-bottom: 25px;">Inserisci la tua ipotesi e il tuo indirizzo email qui sotto per partecipare.</p >
 
-
-
-
-
-<div style="text-align: center; margin: 60px auto; padding: 40px 20px; border: 1px dashed #999; max-width: 800px;">
-    <h3 style="font-family: 'Cinzel', serif; letter-spacing: 3px; font-size: 1.2em; text-transform: uppercase; margin-bottom: 10px; color: #222;">Unisciti al viaggio</h3>
-    <p style="font-size: 0.85em; color: #666; margin-bottom: 25px; line-height: 1.6;">La nostra cantina è sempre in movimento. Quale sarà la regione della nostra prossima vendemmia? Inviaci la tua ipotesi.</p >
-
-
-
-
-
-
-<! 2. Il tuo Modulo HTML -->
-<form id="form-gioco">
-<input type="text" name="ipotesi_regione" placeholder="Scrivi la regione. " required>
-<input type="email" name="email_partecipante" placeholder="La tua email..." required>
-<button type="submit">PARTENZA</button>
-</form>
-
-
-
-
-
-
+  <!-- 2. Your HTML Form -->
+  <form id="form-gioco" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+    <input type="text" name="ipotesi_regione" placeholder="Scrivi la tua ipotesi..." style="padding: 10px; width: 100%; max-width: 300px; text-align: center;">
+    <input type="email" name="email_partecipante" placeholder="La tua email" style="padding: 10px; width: 100%; max-width: 300px; text-align: center;">
+    <button type="submit" style="padding: 10px 30px; letter-spacing: 2px; cursor: pointer;">INVIA</button>
+  </form>
 </div>
-
-
-
-
 
 <div class="links-contatti">
   <a href="mailto:contact.winenut@gmail.com">Email</a >
@@ -384,17 +317,9 @@ Vinificazioni spontanee, macerazioni mirate, nessuna filtrazione o stabilizzazio
   </div>
 </div>
 
-
-
-
-
-
 <p style="text-align: right; width: 100%; display: block; align-self: flex-end; margin-top: 60px; padding-right: 20px; box-sizing: border-box; font-size: 0.75em; color: #555; letter-spacing: 1px; text-transform: uppercase;">
   &copy; 2020 tutti i diritti riservati a winenutwinemakers
 </p >
-
-
-
 
 <!-- 3. Lo script di funzionamento -->
 <script>
@@ -402,7 +327,7 @@ document.getElementById('form-gioco').addEventListener('submit', function(event)
   event.preventDefault();
   
   const btn = event.target.querySelector('button');
-  btn.textContent = 'INVIANDO...';
+  btn.textContent = 'IN INVIO...';
   
   emailjs.sendForm('service_1ongb6a', 'template_o87te8i', this)
   .then(() => {
@@ -414,15 +339,6 @@ document.getElementById('form-gioco').addEventListener('submit', function(event)
   });
 });
 </script>
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WineNut - Winemakers | 天然与手工葡萄酒</title>
-    <meta name="description" content="探索 WineNut Winemakers 的天然与手工葡萄酒。尊重大自然的生产，自然发酵，无过滤。">
+    <title>WineNut - Winemakers | 自然与手工葡萄酒</title>
+    <meta name="description" content="发现 WineNut Winemakers 的自然与手工葡萄酒。尊重大地的生产方式，自然发酵，无过滤。">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
-
 
   <style>
         body {
@@ -21,9 +20,9 @@
             min-height: 100vh;
             position: relative;
             z-index: 0;
-        }
+           }
 
-             body::before {
+      body::before {
     content: "";
     position: fixed;
     top: 0;
@@ -39,7 +38,7 @@
     z-index: -1;
     pointer-events: none;
     animation: muoviLogoSfondo 12s ease-in-out infinite;
-        }
+}
 
         .main-content {
             flex: 1;
@@ -144,7 +143,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Crea spazio verticale tra i tre link */
+    gap: 15px;
   }
 }
     </style>
@@ -184,25 +183,21 @@
   }
 
 
-
-
-
-
 @keyframes muoviLogoSfondo {
     0% {
         transform: scale(1) translate(0%, 0%) rotate(0deg);
     }
     25% {
-        transform: scale(1.05) translate(2%, 2%) rotate(1deg); /* Si sposta a destra/basso e ruota un pochino */
+        transform: scale(1.05) translate(2%, 2%) rotate(1deg);
     }
     50% {
-        transform: scale(1.1) translate(0%, -2%) rotate(0deg); /* Torna al centro ma più grande e sale */
+        transform: scale(1.1) translate(0%, -2%) rotate(0deg);
     }
     75% {
-        transform: scale(1.05) translate(-2%, 2%) rotate(-1deg); /* Si sposta a sinistra/basso e ruota dall'altra parte */
+        transform: scale(1.05) translate(-2%, 2%) rotate(-1deg);
     }
     100% {
-        transform: scale(1) translate(0%, 0%) rotate(0deg); /* Torna esattamente al centro */
+        transform: scale(1) translate(0%, 0%) rotate(0deg);
     }
 }
 </style>
@@ -217,15 +212,19 @@
   })();
 </script>
 
-
-
-
-
-
-
-
 </head>
 <body>
+
+
+<!-- INSERISCI QUI IL SELETTORE LINGUA -->
+<div style="text-align: center; padding: 20px; font-family: serif; letter-spacing: 2px; font-size: 14px;">
+    <a href="index.html " style="text-decoration: none; color: black;">IT</a > | 
+    <a href="index_en.html" style="text-decoration: none; color: black;">EN</a > | 
+    <a href="index_zh.html" style="text-decoration: none; color: black;font-weight: bold">ZH</a >
+</div>
+
+
+
 
 
 
@@ -235,127 +234,85 @@
 <div id="verifica-eta" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.95); z-index: 9999;">
   <div style="text-align: center; padding: 40px 30px; border: 1px solid #222; max-width: 450px; background: #fff; margin: 10% auto; position: relative;">
 
-
-
-
-   <!-- Selettore Lingua interno al riquadro (FILE CINESE) -->
-<div style="position: absolute; top: 15px; right: 20px; font-family: sans-serif; font-size: 0.8em;">
-<a href="index.html" style="text-decoration: none; color: #999; transition: 0.3s;">IT</a >
-<span style="margin: 0 5px; color: #ccc;">|</span>
-<a href="index_en.html" style="text-decoration: none; color: #999; transition: 0.3s;">EN</a >
-<span style="margin: 0 5px; color: #ccc;">|</span>
-<span style="font-weight: bold; color: #000; cursor: default;">ZH</span>
+<!-- Selettore Lingua interno al riquadro (FILE CINESE) -->
+<div style="position: absolute; top: 15px; right: 20px; font-family: sans-serif; font-size: 0.8em; letter-spacing: 1px;">
+    <a href="index.html" style="text-decoration: none; color: #999; transition: 0.3s;">IT</a >
+    <span style="margin: 0 5px; color: #ccc;">|</span>
+    <a href="index_en.html" style="text-decoration: none; color: #999; transition: 0.3s;">EN</a >
+    <span style="margin: 0 5px; color: #ccc;">|</span>
+    <span style="font-weight: bold; color: #000; cursor: default;">ZH</span>
 </div>
 
+    <!-- Testi e Pulsanti -->
+    <h2 style="font-family: 'Cinzel', serif; letter-spacing: 2px; margin-top: 20px; margin-bottom: 20px; font-size: 1.8em;">您是否已成年？</h2>
+    <p style="font-family: sans-serif; font-size: 0.9em; color: #555; margin-bottom: 30px; line-height: 1.5;">您必须达到您所在国家/地区法定饮酒年龄才能进入。</p >
 
-
-<!-- Testi e Pulsanti -->
-<h2 style="font-family: 'Cinzel', serif; letter-spacing: 2px; margin-top: 20px; margin-bottom: 20px;">您是否已达法定饮酒年龄？</h2>
-<p style="font-family: sans-serif; font-size: 0.9em; color: #555; margin-bottom: 30px; line-height: 1.5;">您必须达到您所在国家/地区的法定饮酒年龄方可进入。</p >
-
-<a onclick="document.getElementById('verifica-eta').style.display='none'" style="padding: 12px 30px; border: 1px solid #222; cursor: pointer; margin: 5px; display: inline-block; text-decoration: none; font-family: 'Cinzel', sans-serif; color: #000; letter-spacing: 1px;">是</a >
-
-<a href=" " style="padding: 12px 30px; border: 1px solid #222; color: #222; margin: 5px; display: inline-block; text-decoration: none; font-family: 'Cinzel', sans-serif; letter-spacing: 1px;">否</a >
-
-   
+<a onclick="document.getElementById('verifica-eta').style.display='none'" style="padding: 12px 30px; border: 1px solid #222; color: #222; background: transparent; text-transform: uppercase; cursor: pointer; margin: 5px; display: inline-block; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 1px;">是</a >
     
-
-
-
-
+<a href="https://google.com" style="padding: 12px 30px; border: 1px solid #222; color: #222; background: transparent; text-transform: uppercase; cursor: pointer; margin: 5px; display: inline-block; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 1px;">否</a >
+    
   </div>
 </div>
-
-
-
-
 
     <div class="main-content">
         <div class="container">
             <h1 class="title" style="text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9);">WINENUT</h1>
             <h2 class="subtitle" style="text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.9);">winemakers</h2>
 
-
-
-<p class="testo-corpo" style="text-align-last: center;">
-酿酒是一种生活方式。将酿酒学视为一场探索与发现的旅程！以全新的视角审视葡萄酒。我们与合作的葡萄园携手，通过自然发酵和精准浸渍工艺酿制葡萄酒，过程中不经过滤或稳定处理。
+         <p class="testo-corpo" style="text-align-last: center;">
+  WinenutWinemakers 是一种生活方式。酿酒学被视为一场旅程与发现！用全新的视角看待葡萄酒。通过与尊重大地的生产商合作，以及恢复废弃的葡萄园，我们通过自然发酵、精准浸渍酿造葡萄酒，不经过滤或稳定处理。
 </p >
-
-
 
 <p class="testo-corpo testo-centrato">
-我们的葡萄酒由 Loris Tartaglia 和 William Thomas 精心构思与纯手工酿造。<br>
-</p >
-                
-
-
-<a href="catalogo_en.pdf" target="_blank" style="display: inline-block; padding: 12px 30px; border: 1px solid #222; color: #222; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9em;">
-下载自然酒酒单
-</a >
-
-
-
-
-<p style="text-align: center; font-size: 0.85em; letter-spacing: 4px; text-transform: uppercase; margin-top: 25px; color: #333;">
-威尼托 &bull; 翁布里亚 &bull; 罗马涅 &bull; 托斯卡纳
+  所有葡萄酒均由 Loris Tartaglia 和 William Thomas 构思并手工酿制<br>
 </p >
 
-
-
-
-<div style="text-align: center; margin: 60px auto; padding: 40px 20px; border: 1px dashed #999; max-width: 800px;">
-    <h3 style="font-family: 'Cinzel', serif; letter-spacing: 3px; font-size: 1.2em; text-transform: uppercase; margin-bottom: 10px;">猜猜产区</h3>
-    <p style="font-size: 0.85em; color: #666; margin-bottom: 25px; line-height: 1.6;">我们的酒庄始终在不断探索。下一站会是哪里？</p >
- 
-
-
-
-<!-- 2. Il tuo Modulo HTML -->
-<form id="form-gioco">
-  <input type="text" name="ipotesi_regione" placeholder="输入地区..." required>
-  <input type="email" name="email_partecipante" placeholder="你的电子邮箱..." required>
-  <button type="submit">开始</button>
-</form>
-
-
-
-
-
+<div style="text-align: center; margin: 40px 0;">
+    <a href="catalogo_zh.pdf" target="_blank" style="display: inline-block; padding: 12px 30px; border: 1px solid #222; color: #222; text-decoration: none; font-family: 'Cinzel', serif; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9em;">
+        探索我们的手工葡萄酒
+    </a >
 </div>
+<p style="text-align: center; font-size: 0.85em; letter-spacing: 4px; text-transform: uppercase; margin-top: 25px; color: #333;">
+  威尼托 &bull; 翁布里亚 &bull; 罗马涅 &bull; 托斯卡纳
+</p >
 
+<div style="text-align: center; margin: 60px auto; padding: 40px; max-width: 600px;">
+  <h3 style="font-family: 'Cinzel', serif; letter-spacing: 3px;">竞猜产区</h3>
+  <p style="font-size: 0.85em; color: #666; margin-bottom: 25px;">在下方输入您的猜测和邮箱地址即可参与。</p >
 
-
-
-
-
+  <!-- 2. Your HTML Form -->
+  <form id="form-gioco" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+    <input type="text" name="ipotesi_regione" placeholder="写下您的猜测..." style="padding: 10px; width: 100%; max-width: 300px; text-align: center;">
+    <input type="email" name="email_partecipante" placeholder="您的邮箱" style="padding: 10px; width: 100%; max-width: 300px; text-align: center;">
+    <button type="submit" style="padding: 10px 30px; letter-spacing: 2px; cursor: pointer;">提交</button>
+  </form>
+</div>
 
 <div class="links-contatti">
-    <a href=" ">邮箱</a >
-    <a href="https://instagram.com/winenut.winemakers" target="_blank">Instagram</a >
-
-    <!-- Contenitore WhatsApp con comandi HTML per mostrare/nascondere la tendina -->
-    <div style="position: relative; display: inline-block;" 
-         onmouseenter="document.getElementById('menu-wa').style.display='block'" 
-         onmouseleave="document.getElementById('menu-wa').style.display='none'">
-
-        <a style="cursor: pointer;">WhatsApp</a >
-
-        <!-- Sottomenù nascosto che si apre verso il BASSO (top: 100%) -->
-        <div id="menu-wa" style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 15px;">
-            
-            <a href="https://wa.me/393311141357" target="_blank" style="display: block; font-size: 0.65em; line-height: 1.2; margin-bottom: 5px; text-transform: uppercase;">Loris</a >
-            
-            <a href="https://wa.me/33667362746" target="_blank" style="display: block; font-size: 0.65em; line-height: 1.2; margin-bottom: 5px; text-transform: uppercase;">William</a >
-            
-        </div>
+  <a href="mailto:contact.winenut@gmail.com">Email</a >
+  <a href="https://instagram.com/winenut.winemakers" target="_blank">Instagram</a >
+  
+  <!-- Contenitore WhatsApp con comandi HTML per mostrare/nascondere la tendina -->
+  <div style="position: relative; display: inline-block;" 
+       onmouseenter="document.getElementById('menu-wa').style.display='block'" 
+       onmouseleave="document.getElementById('menu-wa').style.display='none'">
+    
+    <a style="cursor: pointer;">WhatsApp</a >
+    
+    <!-- Sottomenù nascosto che si apre verso il BASSO (top: 100%) -->
+    <div id="menu-wa" style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 15px; text-align: center; z-index: 10;">
+      
+      <a href="https://wa.me/393311141357" target="_blank" style="display: block; font-size: 0.65em; line-height: 1.2; margin-bottom: 8px; white-space: nowrap; text-transform: uppercase;">Loris</a >
+      
+      <a href="https://wa.me/33667362746" target="_blank" style="display: block; font-size: 0.65em; line-height: 1.2; margin-bottom: 0; white-space: nowrap; text-transform: uppercase;">William</a >
+      
     </div>
+  </div>
 </div>
 
-
-<p style="text-align: right; width: 100%; display: block; align-self: flex-end; margin-top: 60px; padding-right: 20px; box-sizing: border-box; font-size: 0.65em; letter-spacing: 1px; text-transform: uppercase;">
-&copy; 2020 winenutwinemakers 版权所有
+<p style="text-align: right; width: 100%; display: block; align-self: flex-end; margin-top: 60px; padding-right: 20px; box-sizing: border-box; font-size: 0.75em; color: #555; letter-spacing: 1px; text-transform: uppercase;">
+  &copy; 2020 winenutwinemakers 保留所有权利
 </p >
-
 
 <!-- 3. Lo script di funzionamento -->
 <script>
@@ -365,7 +322,7 @@ document.getElementById('form-gioco').addEventListener('submit', function(event)
   const btn = event.target.querySelector('button');
   btn.textContent = '发送中...';
   
-  emailjs.sendForm('service_longb6a', 'template_o87te8i', this)
+  emailjs.sendForm('service_1ongb6a', 'template_o87te8i', this)
   .then(() => {
     btn.textContent = '已发送！';
     this.reset();
@@ -375,11 +332,6 @@ document.getElementById('form-gioco').addEventListener('submit', function(event)
   });
 });
 </script>
-
-
-
-
-
 
 </body>
 </html>
